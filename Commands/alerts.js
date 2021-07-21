@@ -9,14 +9,12 @@ module.exports = {
         .setColor("#66F037")
         .setTitle("Set your alerts here:")
         .setDescription(`Choose which alerts you want notifications for\n\n`
-          + `${testEmoji} for test\n`
+          + `${nexEmoji} for nex alerts\n`
         );
 
      let MessageEmbed = await message.channel.send({embed});
-     MessageEmbed.react(testEmoji);
-		 MessageEmbed.react(testEmoji);
-		 MessageEmbed.react(testEmoji);
-		 MessageEmbed.react(testEmoji);
+     MessageEmbed.react(nexEmoji);
+
 
      client.on("messageReactionAdd", async (reaction, user) => {
        if(reaction.message.partial) await reaction.message.fetch();
