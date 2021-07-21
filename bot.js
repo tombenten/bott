@@ -1,10 +1,11 @@
+
 const Discord = require('discord.js');
 const client = new Discord.Client({partials: ["MESSAGE", "CHANNEL", "REACTION"]});
 const prefix = "!"
 const fs = require("fs");
 //Bot.js File:
 const keepAlive = require('./server.js');
-const mySecret = process.env['DISCORD_BOT_TOKEN']
+const mySecret = process.env['TOKEN']
 
 
 client.commands = new Discord.Collection();
@@ -12,7 +13,7 @@ client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync("./Commands/").filter(file => file.endsWith(".js"));
 
 for (const file of commandFiles) {
-    const command = require(`./commands/${file}`);
+    const command = require(`./Commands/${file}`);
     // set a new item in the Collection
     // with the key as the command name and the value as the exported module
     client.commands.set(command.name, command);
@@ -40,6 +41,8 @@ client.on('message', message => {
 		message.reply('upsy wupsy you did a fucky wucky');
 	}
 });
+
+
 
 
 
