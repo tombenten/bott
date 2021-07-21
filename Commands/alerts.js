@@ -41,8 +41,8 @@ module.exports = {
        if(!reaction.message.guild) return;
 
        if(reaction.message.channel.id === channel){
-         if(reaction.emoji.name === testEmoji) {
-           await reaction.message.guild.members.cache.get(user.id).roles.remove(testRole);
+         if(reaction.emoji.name === nexEmoji) {
+           await reaction.message.guild.members.cache.get(user.id).roles.remove(nexRole);
          } else {
            return;
          }
