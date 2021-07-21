@@ -9,7 +9,9 @@
   "author": "Wumkin",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.5.3"
+    "discord.js": "^12.5.3",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12"
   },
   "devDependencies": {
     "eslint": "^7.31.0"
