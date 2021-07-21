@@ -37,7 +37,18 @@ module.exports = {
        if(reaction.message.channel.id === channel){
          if(reaction.emoji.name === nexEmoji) {
            await reaction.message.guild.members.cache.get(user.id).roles.add(nexRole);
-         } else {
+         }
+				 if(reaction.emoji.name === joeyEmoji) {
+           await reaction.message.guild.members.cache.get(user.id).roles.add(joeyRole);
+         }
+				 if(reaction.emoji.name === demonEmoji) {
+           await reaction.message.guild.members.cache.get(user.id).roles.add(demonRole);
+         }
+				 if(reaction.emoji.name === creEmoji) {
+           await reaction.message.guild.members.cache.get(user.id).roles.add(creRole);
+         }
+
+				 else {
            return;
          }
        }
