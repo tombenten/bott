@@ -15,10 +15,10 @@ module.exports = {
         .setColor("#66F037")
         .setTitle("Set your alerts here:")
         .setDescription(`Choose which alerts you want notifications for!\n\n`
-          + `${nexEmoji} for **Nex** alerts\n`
-					+ `${joeyEmoji} for **Joey** alerts\n`
-					+ `${demonEmoji} for **Demon** alerts\n`
-					+ `${creEmoji} for **Cre** alerts\n`
+          + `- ${nexEmoji} for **Nex** alerts\n\n`
+					+ `- ${joeyEmoji} for **Joey** alerts\n\n`
+					+ `- ${demonEmoji} for **Demon** alerts\n\n`
+					+ `- ${creEmoji} for **Cre** alerts\n`
         );
 
      let MessageEmbed = await message.channel.send({embed});
